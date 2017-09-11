@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>AEM-Asset-Bridge</title>
+  <title>Tappecue Panel for CC</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -15,7 +15,7 @@
   <script src="../lib/main.js"></script>
   <title>Tappecue</title>
 </head>
-<body id="index_body" onload="onLoaded();">
+<body id="index_body">
  <div class="panel panel-default">
     <div class="panel-heading panel-heading-sm">
       <a data-toggle="collapse" href="#connectaem">Log in to Tappecue</a>
@@ -24,14 +24,14 @@
       <div class="panel-body">
         <div class="form-group">
           <label for="url_lbl"><i class="fa fa-server" aria-hidden="true"></i>Username:</label>
-          <input type="text" class="form-control" id="username" placeholder="Enter your Teppecue user">
+          <input type="text" class="form-control" id="username" placeholder="Enter your Teppecue username">
           <label for="url_lbl"><i class="fa fa-server" aria-hidden="true"></i>Password:</label>
           <input type="password" class="form-control" id="pw" placeholder="Enter your Teppecue password">
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-default" onclick="connect()">Log in</button>
+          <button type="button" class="btn btn-default" id="loginBtn">Log in</button>
           <button type="button" class="btn btn-default" onclick="signout()">Sign Out</button>
-        </div>
+          </div> Your token:<span id="X-Auth-Header"></span>
       </div>
     </div>
   </div>
