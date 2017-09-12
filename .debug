@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionList>
-    <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.0"/>
+    <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.0">
         <HostList>
             <Host Name="KBRG" Port="8180"/>
         </HostList>
     </Extension>
 </ExtensionList>
+
