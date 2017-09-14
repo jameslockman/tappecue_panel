@@ -19,30 +19,29 @@
 </head>
 <body id="index_body">
 <div class="panel panel-default">
-    <div class="panel-heading panel-heading-sm"> <a data-toggle="collapse" href="#connectaem">Log in to Tappecue</a> </div>
-    <div id="connectaem" class="panel-collapse collapse in">
+    <div class="panel-heading panel-heading-sm" data-toggle="collapse" href="#connect" id="loginmessage">Log in to Tappecue</div>
+    <div id="connect" class="panel-collapse collapse in">
         <div class="panel-body">
             <div class="form-group">
                 <label for="url_lbl2"><em class="fa fa-server" aria-hidden="true"></em>Username:</label>
                 <input type="text" class="form-control" id="username" placeholder="Enter your Teppecue username">
                 <label for="url_lbl"><i class="fa fa-server" aria-hidden="true"></i>Password:</label>
                 <input type="password" class="form-control" id="pw" placeholder="Enter your Teppecue password">
+                <button type="button" class="btn btn-default" id="loginbtn">Log in</button>
+                <button type="button" class="btn btn-default" id="logoutbtn" onclick="signout()">Sign Out</button>
             </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-default" id="loginBtn">Log in</button>
-                <button type="button" class="btn btn-default" onclick="signout()">Sign Out</button>
-                Your token:<span id="X-Auth-Header"></span></div>
         </div>
     </div>
-</div>
-<div class="panel panel-default">
-    <div id="userGreeting" class="panel-heading panel-heading-sm">
-        <p>Login to see your Tappecue temperatures.</p>
-    </div>
-    <div class="panel-body">
-        <p>Your temperature data will be here once you login.</p>
-    </div>
-    <div class="panel-footer panel-footer-sm"> MMM. BBQ. </div>
+    
+        <div id="sessionMessage" class="panel-heading panel-heading-sm" data-toggle="collapse" href="#sessionselect">Login to select your Tappecue session</div>
+        <div id="sessionselect" class="panel-body panel-collapse collapse">
+            <p id="sessions">Your sessions will be here once you login.</p>
+            <div id="probe1">Probe1</div>
+            <div id="probe2">Probe2</div>
+            <div id="probe3">Probe3</div>
+            <div id="probe4">Probe4</div>
+        </div>
+    <div class="panel-footer panel-footer-sm"> MMM. BBQ. <span id="timezone"></span></div>
 </div>
 </body>
 </html>
