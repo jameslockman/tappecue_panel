@@ -5,16 +5,17 @@
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
-            <Host Name="DRWV" Version="14.0"/>
-            <Host Name="FLPR" Version="14.0"/>
-            <Host Name="IDSN" Version="10.0"/>
-            <Host Name="AICY" Version="10.0"/>
-            <Host Name="ILST" Version="18.0"/>
-            <Host Name="PHSP" Version="14.0"/>
-            <Host Name="PHXS" Version="14.0"/>
-            <Host Name="PPRO" Version="8.0"/>
-            <Host Name="PRLD" Version="3.0"/>
-            <Host Name="AEFT" Version="13.0"/>
+            <Host Name="DRWV" Version="[16.0,17.9]"/>
+            <Host Name="FLPR" Version="[14.0,16.9]"/>
+            <Host Name="IDSN" Version="[11.0,13.9]"/>
+            <Host Name="AICY" Version="[11.0,13.9]"/>
+            <Host Name="ILST" Version="[18.0,21.9]"/>
+            <Host Name="PHSP" Version="[14.0,18.9]"/>
+            <Host Name="PHXS" Version="[14.0,18.9]"/>
+            <Host Name="PPRO" Version="[9.0,11.9]"/>
+            <Host Name="PRLD" Version="[5.0,6.9]"/>
+            <Host Name="AEFT" Version="[13.0,14.9]"/>
+            <Host Name="AUDT" Version="[9.0,10.9]"/>
             <Host Name="DEMO" Version="1.0"/>
 			<Host Name="KBRG" Version="[7.1,8.9]"/>
         </HostList>

@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/bootstrap.min.css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 <script>if (typeof exports === 'object') {window.exports = exports; exports = undefined;}</script>
 <script src="../lib/jquery-3.2.1.min.js"></script>
 <script src="../lib/bootstrap.min.js"></script>
-<script src="../lib/CEPEngine_extensions.js"></script>
 <script src="../lib/CSInterface.js"></script>
 <script src="../lib/AgoraLib.js"></script>
 <script src="../lib/Vulcan.js"></script>
@@ -18,30 +18,54 @@
 <title>Tappecue</title>
 </head>
 <body id="index_body">
-<div class="panel panel-default">
-    <div class="panel-heading panel-heading-sm" data-toggle="collapse" href="#connect" id="loginmessage">Log in to Tappecue</div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-heading-sm" data-toggle="collapse" href="#connect"><img src="../img/tappecue.png" width="40"> <span id="loginmessage">Log in to Tappecue</span></div>
     <div id="connect" class="panel-collapse collapse in">
         <div class="panel-body">
             <div class="form-group">
                 <label for="url_lbl2"><em class="fa fa-server" aria-hidden="true"></em>Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter your Teppecue username">
+                <input type="text" class="form-control" id="username" placeholder="Enter your Tappecue username">
                 <label for="url_lbl"><i class="fa fa-server" aria-hidden="true"></i>Password:</label>
-                <input type="password" class="form-control" id="pw" placeholder="Enter your Teppecue password">
+                <input type="password" class="form-control" id="pw" placeholder="Enter your Tappecue password">
                 <button type="button" class="btn btn-default" id="loginbtn">Log in</button>
                 <button type="button" class="btn btn-default" id="logoutbtn" onclick="signout()">Sign Out</button>
             </div>
         </div>
     </div>
-    
-        <div id="sessionMessage" class="panel-heading panel-heading-sm" data-toggle="collapse" href="#sessionselect">Login to select your Tappecue session</div>
-        <div id="sessionselect" class="panel-body panel-collapse collapse">
-            <p id="sessions">Your sessions will be here once you login.</p>
-            <div id="probe1">Probe1</div>
-            <div id="probe2">Probe2</div>
-            <div id="probe3">Probe3</div>
-            <div id="probe4">Probe4</div>
-        </div>
-    <div class="panel-footer panel-footer-sm"> MMM. BBQ. <span id="timezone"></span></div>
 </div>
+<div class="panel panel-success">
+    <div id="sessionMessage" class="panel-heading panel-heading-sm panel-success" data-toggle="collapse" href="#sessionselect">Login to see your Tappecue session</div>
+    <div id="sessionselect" class="panel-body panel-collapse collapse">
+        <div class="row ui-scale">
+            <div class="btn btn-success col-xs-6 probe" id="probe1">
+                <h4>Probe 1</h4>
+                <h4 id="probe1Name"></h4>
+                <h2 id="probe1Temp"></h2>
+                <p id="probe1Target"></p>
+            </div>
+            <div class="btn btn-danger col-xs-6 probe" id="probe2">
+                <h4>Probe 2</h4>
+                <h4 id="probe2Name"></h4>
+                <h2 id="probe2Temp"></h2>
+                <p id="probe2Target"></p>
+            </div>
+        </div>
+        <div class="row ui-scale">
+            <div class="btn btn-inactive col-xs-6 probe" id="probe3">
+                <h4>Probe 3</h4>
+                <h4 id="probe3Name"></h4>
+                <h2 id="probe3Temp"></h2>
+                <p id="probe3Target"></p>
+            </div>
+            <div class="btn btn-info col-xs-6 probe" id="probe4">
+                <h4>Probe 4</h4>
+                <h4 id="probe4Name"></h4>
+                <h2 id="probe4Temp"></h2>
+                <p id="probe4Target"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom"><span class="navbar-brand">MMM. BBQ. <span id="timezone"></span></span></div>
 </body>
 </html>
