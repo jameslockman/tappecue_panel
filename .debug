@@ -3,6 +3,17 @@
     <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.0">
         <HostList>
             <Host Name="KBRG" Port="8180"/>
+            <Host Name="DRWV" Port="8181"/>
+            <Host Name="FLPR" Port="8182"/>
+            <Host Name="IDSN" Port="8183"/>
+            <Host Name="AICY" Port="8184"/>
+            <Host Name="ILST" Port="8185"/>
+            <Host Name="PHSP" Port="8186"/>
+            <Host Name="PHXS" Port="8187"/>
+            <Host Name="PPRO" Port="8188"/>
+            <Host Name="PRLD" Port="8189"/>
+            <Host Name="AEFT" Port="8190"/>
+            <Host Name="AUDT" Port="8191"/>
         </HostList>
     </Extension>
 </ExtensionList>
