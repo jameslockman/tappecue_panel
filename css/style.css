@@ -1,26 +1,83 @@
 @charset "UTF-8";
-p {
-    word-wrap: break-word;
+.targetCR {
+    display: none;
 }
-
-h3 {
-    word-wrap: break-word;
+.smokeIcon {
+    height: 75px;
+    width: 75px;
 }
-
-h4 {
-    word-wrap: break-word;
-}
-
-
 .probe {
     border-radius: 25px;
     border: 4px solid #FFFFFF;
     padding-top: 0px;
 }
+.probe-danger {
+    background-color: #DA0000;
+    color: #FFFFFF;
+}
+.probe-ok {
+    background-color: #1CA010;
+    color: #FFFFFF;
+}
+.probe-warning {
+    background-color: #DABC00;
+    color: #FFFFFF;
+}
+.probe-inactive {
+    background-color: #858585;
+    color: #FFFFFF;
+}
 .btn-inactive {
     background-color: #858585;
     color: #FFFFFF;
 }
-.ui-scale {
-    transform: scale(1);
+.probeNumber {
+    font-size: 18px;
+}
+.probeName {
+    font-size: 18px;
+}
+.probeTemp {
+    font-size: 28px;
+}
+.probeTarget {
+    font-size: 14px;
+}
+.panel {
+    margin-bottom: 10px;
+}
+.smokePanel {
+    margin-bottom: 51px;
+}
+.loginForm {
+    margin-bottom: 10px;
+}
+.panelCredits {
+    font-size: 80%;
+}
+.externalURL {
+    cursor: pointer;
+}
+
+@media (max-width: 333px) {
+.smokeIcon {
+    height: 50px;
+    width: 50px;
+}
+.targetCR {
+    display: block;
+}
+.probeNumber {
+    font-size: 18px;
+}
+.probeName {
+    font-size: 14px;
+}
+.probeTemp {
+    font-size: 24px;
+}
+.probeTarget {
+    font-size: 13px;
+}
+
 }

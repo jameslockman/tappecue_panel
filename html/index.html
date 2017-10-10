@@ -5,7 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/bootstrap.min.css">
+<link href="../css/bootstrap-switch.min.css" rel="stylesheet">
 <link href="../css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 <script>if (typeof exports === 'object') {window.exports = exports; exports = undefined;}</script>
 <script src="../lib/jquery-3.2.1.min.js"></script>
@@ -14,6 +16,8 @@
 <script src="../lib/AgoraLib.js"></script>
 <script src="../lib/Vulcan.js"></script>
 <script src="../lib/bootstrap-dialog.min.js"></script>
+<script src="../lib/bootstrap-switch.min.js"></script>
+<script src="../lib/moment.min.js"></script>
 <script src="../lib/main.js"></script>
 <title>Tappecue</title>
 </head>
@@ -23,55 +27,57 @@
     <div id="connect" class="panel-collapse collapse in">
         <div class="panel-body">
             <div class="form-group">
-                <label for="url_lbl2"><em class="fa fa-server" aria-hidden="true"></em>Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter your Tappecue username">
-                <label for="url_lbl"><i class="fa fa-server" aria-hidden="true"></i>Password:</label>
-                <input type="password" class="form-control" id="pw" placeholder="Enter your Tappecue password">
-                <button type="button" class="btn btn-default" id="loginbtn">Log in</button>
-                <button type="button" class="btn btn-default" id="logoutbtn" onclick="signout()">Sign Out</button>
+                <div class="loginForm"><label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your Tappecue username"></div>
+                <div class="loginForm"><label for="pw">Password:</label>
+                    <input type="password" class="form-control" id="pw" placeholder="Enter your Tappecue password"></div>
+                <div class="loginForm"><button type="button" class="btn btn-success" id="loginbtn">Log in</button>
+                    <button type="button" class="btn btn-disabled" id="logoutbtn" onclick="signout()">Sign Out</button></div>
+                <div class="loginForm"><label for="rememberUsername">Remember username</label>
+                    <input type="checkbox" name="rememberUsername" checked></div>
             </div>
         </div>
     </div>
 </div>
-<div class="panel panel-success">
+<div class="panel panel-success smokePanel">
     <div id="sessionMessage" class="panel-heading panel-heading-sm panel-success" data-toggle="collapse" href="#sessionselect">Login to see your Tappecue session</div>
     <div id="sessionselect" class="panel-body panel-collapse collapse" display="none">
-        <div class="row ui-scale">
-            <div class="btn btn-success col-xs-6 probe" id="probe1">
-                <h4>Probe 1</h4>
-                <h4 id="probe1Name"></h4>
-                <h2 id="probe1Temp"></h2>
-                <p id="probe1Target"></p>
+        <div class="row">
+            <div class="col-xs-6 probe probe-warning" id="probe1">
+                <h4 align="center" class="probeNumber">Probe 1</h4>
+                <h4 align="center" id="probe1Name" class="probeName">Brisket (chamber)</h4>
+                <h2 align="center" id="probe1Temp" class="probeTemp">250 <img src="../img/cooker.png" class="smokeIcon" alt="Chamber Probe"/></h2>
+                <p align="center" id="probe1Target" class="probeTarget">Target range: 225 - 275</p>
             </div>
-            <div class="btn btn-danger col-xs-6 probe" id="probe2">
-                <h4>Probe 2</h4>
-                <h4 id="probe2Name"></h4>
-                <h2 id="probe2Temp"></h2>
-                <p id="probe2Target"></p>
+            <div class="col-xs-6 probe probe-ok" id="probe2">
+                <h4 align="center" class="probeNumber">Probe 2</h4>
+                <h4 align="center" id="probe2Name" class="probeName">Brisket</h4>
+                <h2 align="center" id="probe2Temp" class="probeTemp">250 <img src="../img/meat.png" class="smokeIcon" alt="Chamber Probe"/></h2>
+                <p align="center" id="probe2Target" class="probeTarget">Target range: 225 - 275</p>
             </div>
         </div>
-        <div class="row ui-scale">
-            <div class="btn btn-inactive col-xs-6 probe" id="probe3">
-                <h4>Probe 3</h4>
-                <h4 id="probe3Name"></h4>
-                <h2 id="probe3Temp"></h2>
-                <p id="probe3Target"></p>
+        <div class="row">
+            <div class="col-xs-6 probe probe-danger" id="probe3">
+                <h4 align="center" class="probeNumber">Probe 3</h4>
+                <h4 align="center" id="probe3Name" class="probeName">Brisket (chamber)</h4>
+                <h2 align="center" id="probe3Temp" class="probeTemp">250 <img src="../img/cooker.png" class="smokeIcon" alt="Chamber Probe"/></h2>
+                <p align="center" id="probe3Target" class="probeTarget">Target range: 225 - 275</p>
             </div>
-            <div class="btn btn-info col-xs-6 probe" id="probe4">
-                <h4>Probe 4</h4>
-                <h4 id="probe4Name"></h4>
-                <h2 id="probe4Temp"></h2>
-                <p id="probe4Target"></p>
+            <div class="col-xs-6 probe probe-inactive" id="probe4">
+                <h4 align="center" class="probeNumber">Probe 4</h4>
+                <h4 align="center" id="probe4Name" class="probeName">Brisket (chamber)</h4>
+                <h2 align="center" id="probe4Temp" class="probeTemp">250 <img src="../img/cooker.png" class="smokeIcon" alt="Chamber Probe"/></h2>
+                <p align="center" id="probe4Target" class="probeTarget">Target range: 225 - 275</p>
             </div>
         </div>
     </div>
     <div id="extensionInfo" class="panel-body">
-    <h3>Track your cook while you work!</h3>
-    <p>Tappecue is a wireless, Internet connected thermometer. This panel displays your cook data, so you can stop checking your phone and keep you focus on your work. Simply start your cook with your Tappecue app on your device, then log in here. Your current cook data will display here while you're logged in.</p>
-    <p>We hope you like it! 
+        <h3>Track your cook while you work!</h3>
+        <p><span class="externalURL" onclick="window.cep.util.openURLInDefaultBrowser('http://www.tappecue.com')"><b><u>Tappecue</u></b></span> is a wireless, Internet connected thermometer. This panel displays your cook data, so you can stop checking your phone and focus on your work. Simply start your cook with your Tappecue app on your device, then log in here. Your current cook data will display here while you're logged in.</p>
+        <p>We hope you like it!</p>
+        <p class="panelCredits">This panel was made by <span class="externalURL" onclick="window.cep.util.openURLInDefaultBrowser('http://blogs.adobe.com/jlockman/')"><b><u>James Lockman</u></b></span>. He doesn't have any connection to Tappecue, but he is an enthusiastic Tappecue customer and Creative Cloud extensions tinkerer.</p>
+    </div>
 </div>
-
-</div>
-<div class="navbar navbar-inverse navbar-fixed-bottom"><span class="navbar-brand">MMM. BBQ. <span id="timezone"></span></span></div>
+<div class="navbar navbar-inverse navbar-fixed-bottom"><span class="navbar-brand">MMM. BBQ. <span class="fa-stack"><i class="fa fa-wifi fa-stack-1x" id="wifi"></i></span></span></div>
 </body>
 </html>
