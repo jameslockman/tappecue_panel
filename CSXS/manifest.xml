@@ -18,6 +18,7 @@
             <Host Name="AUDT" Version="9.0"/>
             <Host Name="DEMO" Version="1.0"/>
             <Host Name="KBRG" Version="8.0"/>
+            <Host Name="BRDG" Version="8.0"/>
         </HostList>
         <LocaleList>
             <Locale Code="All"/>
