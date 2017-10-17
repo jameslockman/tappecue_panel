@@ -10,6 +10,8 @@
     border-radius: 25px;
     border: 4px solid #FFFFFF;
     padding-top: 0px;
+    background-color: #F7A006;
+    color: #FFFFFF;
 }
 .probe-danger {
     background-color: #DA0000;
