@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ExtensionManifest Version="7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.jameslockman.cep.tappecue" ExtensionBundleVersion="1.0.1" ><!-- MAJOR-VERSION-UPDATE-MARKER -->
+<ExtensionManifest Version="7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.jameslockman.cep.tappecue" ExtensionBundleVersion="1.2.0" ><!-- MAJOR-VERSION-UPDATE-MARKER -->
     <ExtensionList>
-        <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.0.1"/>
+        <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.2.0"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -17,9 +17,9 @@
             <Host Name="AEFT" Version="13.0"/>
             <Host Name="AUDT" Version="9.0"/>
             <Host Name="DEMO" Version="1.0"/>
-            <Host Name="KBRG" Version="8.0"/>
+            <Host Name="KBRG" Version="7.0"/>
             <!-- Entry below required to support Add-ons Marketplace and Bridge -->
-            <Host Name="BRDG" Version="8.0"/>
+            <Host Name="BRDG" Version="7.0"/>
         </HostList>
         <LocaleList>
             <Locale Code="All"/>

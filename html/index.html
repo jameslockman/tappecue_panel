@@ -6,35 +6,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link href="../css/bootstrap-switch.min.css" rel="stylesheet">
-<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/bootstrap-select.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 <script>if (typeof exports === 'object') {window.exports = exports; exports = undefined;}</script>
 <script src="../lib/jquery-3.2.1.min.js"></script>
-<script src="../lib/bootstrap.min.js"></script>
 <script src="../lib/CSInterface.js"></script>
 <script src="../lib/AgoraLib.js"></script>
 <script src="../lib/Vulcan.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
 <script src="../lib/bootstrap-dialog.min.js"></script>
 <script src="../lib/bootstrap-switch.min.js"></script>
+<script src="../lib/bootstrap-select.min.js"></script>
 <script src="../lib/moment.min.js"></script>
 <script src="../lib/main.js"></script>
 <title>Tappecue</title>
 </head>
 <body id="index_body">
 <div class="panel panel-primary">
-    <div class="panel-heading panel-heading-sm" data-toggle="collapse" href="#connect"><img src="../img/tappecue.png" width="40"> <span id="loginmessage">Log in to Tappecue</span></div>
+    <div class="panel-heading panel-heading-sm" data-toggle="collapse" href="#connect"><img src="../img/tappecue.png" alt="Tappecue Logo" width="40"> <span id="loginmessage">Log in to Tappecue</span></div>
     <div id="connect" class="panel-collapse collapse in">
         <div class="panel-body">
             <div class="form-group">
-                <div class="loginForm"><label for="username">Username:</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter your Tappecue username"></div>
-                <div class="loginForm"><label for="pw">Password:</label>
-                    <input type="password" class="form-control" id="pw" placeholder="Enter your Tappecue password"></div>
-                <div class="loginForm"><button type="button" class="btn btn-success" id="loginbtn">Log in</button>
-                    <button type="button" class="btn btn-disabled" id="logoutbtn" onclick="signout()">Sign Out</button></div>
-                <div class="loginForm"><label for="rememberUsername">Remember username</label>
-                    <input type="checkbox" name="rememberUsername" checked></div>
+                <div class="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your Tappecue username">
+                </div>
+                <div class="loginForm">
+                    <label for="pw">Password:</label>
+                    <input type="password" class="form-control" id="pw" placeholder="Enter your Tappecue password">
+                </div>
+                <div class="loginForm">
+                    <button type="button" class="btn btn-success" id="loginbtn">Log in</button>
+                    <button type="button" class="btn btn-disabled" id="logoutbtn" onclick="signout()">Sign Out</button>
+                </div>
+                <div class="loginForm">
+                    <label for="rememberUsername">Remember username</label>
+                    <input type="checkbox" name="rememberUsername" checked>
+                </div>
+                <div class="loginForm">
+                    <label for="timeZone">Set your Time Zone</label>
+                    <select id="timeZone" class="selectpicker">
+                        <option value ="GMT">GMT</option>
+                        <option value ="UTC">UTC</option>
+                        <option value ="US/Eastern">US/Eastern</option>
+                        <option value ="US/Central">US/Central</option>
+                        <option value ="US/Mountain">US/Mountain</option>
+                        <option value ="US/Arizona">US/Arizona</option>
+                        <option value ="US/Pacific">US/Pacific</option>
+                        <option value ="US/Alaska">US/Alaska</option>
+                        <option value ="US/Hawaii">US/Hawaii</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>

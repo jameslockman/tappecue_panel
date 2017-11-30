@@ -60,6 +60,10 @@
 .externalURL {
     cursor: pointer;
 }
+.cog {
+    float: right;
+    font-size: 18px;
+}
 
 @media (max-width: 333px) {
 .smokeIcon {
