@@ -12,6 +12,7 @@
     padding-top: 0px;
     background-color: #F7A006;
     color: #FFFFFF;
+    height: auto;
 }
 .probe-danger {
     background-color: #DA0000;
