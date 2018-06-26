@@ -1,0 +1,1 @@
+/Users/jlockman/Documents/Bridge\ next/ccextensionsmac/ZXPSignCmd -sign /Users/jlockman/Documents/com.jameslockman.tappecue /Users/jlockman/Documents/Bridge\ next/ccextensionsmac/Tappecue.zxp /Users/jlockman/Documents/Bridge\ next/ccextensionsmac/selfsign.p12 AdobeDigitalMedia! -tsa http://tsa.safecreative.org/
