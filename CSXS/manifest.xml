@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ExtensionManifest Version="7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.jameslockman.cep.tappecue" ExtensionBundleVersion="1.4.2" ><!-- MAJOR-VERSION-UPDATE-MARKER -->
+<ExtensionManifest Version="7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.jameslockman.cep.tappecue" ExtensionBundleVersion="1.3.1" ><!-- MAJOR-VERSION-UPDATE-MARKER -->
     <ExtensionList>
-        <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.4.2"/>
+        <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.3.1"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
-            <Host Name="DRWV" Version="18.0"/>
-            <Host Name="FLPR" Version="18.0"/>
-            <Host Name="IDSN" Version="13.0"/>
-            <Host Name="AICY" Version="13.0"/>
-            <Host Name="ILST" Version="22.0"/>
-            <Host Name="PHSP" Version="19.0"/>
-            <Host Name="PHXS" Version="19.0"/>
-            <Host Name="PPRO" Version="12.0"/>
-            <Host Name="PRLD" Version="7.0"/>
-            <Host Name="AEFT" Version="15.0"/>
-            <Host Name="AUDT" Version="10.0"/>
+            <Host Name="DRWV" Version="16.0"/>
+            <Host Name="FLPR" Version="14.0"/>
+            <Host Name="IDSN" Version="11.0"/>
+            <Host Name="AICY" Version="11.0"/>
+            <Host Name="ILST" Version="18.0"/>
+            <Host Name="PHSP" Version="14.0"/>
+            <Host Name="PHXS" Version="14.0"/>
+            <Host Name="PPRO" Version="9.0"/>
+            <Host Name="PRLD" Version="5.0"/>
+            <Host Name="AEFT" Version="13.0"/>
+            <Host Name="AUDT" Version="9.0"/>
             <!-- <Host Name="DEMO" Version="1.0"/> -->
-            <Host Name="KBRG" Version="8.0"/>
+            <Host Name="KBRG" Version="7.0"/>
             <!-- Entry below required to support Add-ons Marketplace and Bridge -->
             <!-- <Host Name="BRDG" Version="7.0"/> -->
         </HostList>
@@ -25,7 +25,7 @@
             <Locale Code="All"/>
         </LocaleList>
         <RequiredRuntimeList>
-            <RequiredRuntime Name="CSXS" Version="8.0"/>
+            <RequiredRuntime Name="CSXS" Version="7.0"/>
             <!-- MAJOR-VERSION-UPDATE-MARKER -->
         </RequiredRuntimeList>
     </ExecutionEnvironment>

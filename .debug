@@ -2,7 +2,7 @@
 <ExtensionList>
     <Extension Id="com.jameslockman.cep.tappecue.panel" Version="1.3.1">
         <HostList>
-            <!-- <Host Name="BRDG" Port="8180"/> -->
+            <Host Name="BRDG" Port="8180"/>
             <Host Name="DRWV" Port="8181"/>
             <Host Name="FLPR" Port="8182"/>
             <Host Name="IDSN" Port="8183"/>
