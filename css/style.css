@@ -18,6 +18,10 @@
     background-color: #DA0000;
     color: #FFFFFF;
 }
+.probe-cold {
+    background-color: #00BDDA;
+    color: #FFFFFF;
+}
 .probe-ok {
     background-color: #1CA010;
     color: #FFFFFF;
