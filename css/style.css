@@ -69,6 +69,9 @@
     float: right;
     font-size: 18px;
 }
+.targetRange {
+		display:inline;
+	}
 
 @media (max-width: 333px) {
 .smokeIcon {
@@ -89,6 +92,36 @@
 }
 .probeTarget {
     font-size: 13px;
+}
+
+}
+
+@media (max-width: 200px){
+.probe {
+    border-radius: 12px;
+    padding: 0px;
+}
+.targetRange {
+		display:none;
+	}
+.smokeIcon {
+    height: 30px;
+    width: 30px;
+}
+.targetCR {
+    display: block;
+}
+.probeNumber {
+    font-size: 10px;
+}
+.probeName {
+    font-size: 12px;
+}
+.probeTemp {
+    font-size: 18px;
+}
+.probeTarget {
+    font-size: 10px;
 }
 
 }
